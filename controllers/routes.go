@@ -50,5 +50,5 @@ func generateShortUrl(url string) string {
 	hasher.Write([]byte(url))
 	data := hasher.Sum(nil)
 	hash := hex.EncodeToString(data)
-	return hash
+	return hash[:8]
 }
